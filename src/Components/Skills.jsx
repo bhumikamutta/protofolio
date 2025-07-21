@@ -63,53 +63,55 @@ const skills = [
 
 const Skills = () => {
   return (
-    <Container className="my-5">
-      <h2 className="text-center mb-5 display-5 fw-bold" style={{ borderBottom: '4px solid #007bff', display: 'inline-block', paddingBottom: '5px' }}>
-        Skills
-      </h2>
+    <section id="skills">
+      <Container className="my-5">
+        <h2 className="text-center mb-5 display-5 fw-bold" style={{ borderBottom: '4px solid #007bff', display: 'inline-block', paddingBottom: '5px' }}>
+          Skills
+        </h2>
 
-      {skills.map((section, index) => (
-        <div key={index} className="mb-5">
-          <motion.h4
-            className="mb-4"
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            style={{
-              textDecoration: 'underline',
-              textUnderlineOffset: '6px',
-              color: '#007bff'
-            }}
-          >
-            {section.category}
-          </motion.h4>
-          <Row>
-            {section.items.map((skill, i) => (
-              <Col key={i} md={4} sm={6} className="mb-3">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  whileHover={{ scale: 1.07, boxShadow: '0 4px 12px rgba(0, 123, 255, 0.2)' }}
-                  className="p-3 rounded d-flex align-items-center gap-3"
-                  style={{
-                    border: '1px solid #dee2e6',
-                    backgroundColor: '#f8f9fa',
-                    borderRadius: '12px',
-                    transition: 'all 0.3s ease',
-                    height: '100%'
-                  }}
-                >
-                  <div>{skill.icon}</div>
-                  <strong>{skill.name}</strong>
-                </motion.div>
-              </Col>
-            ))}
-          </Row>
-        </div>
-      ))}
-    </Container>
+        {skills.map((section, index) => (
+          <div key={index} className="mb-5">
+            <motion.h4
+              className="mb-4"
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              style={{
+                textDecoration: 'underline',
+                textUnderlineOffset: '6px',
+                color: '#007bff'
+              }}
+            >
+              {section.category}
+            </motion.h4>
+            <Row>
+              {section.items.map((skill, i) => (
+                <Col key={i} md={4} sm={6} className="mb-3">
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    whileHover={{ scale: 1.07, boxShadow: '0 4px 12px rgba(0, 123, 255, 0.2)' }}
+                    className="p-3 rounded d-flex align-items-center gap-3"
+                    style={{
+                      border: '1px solid #dee2e6',
+                      backgroundColor: '#f8f9fa',
+                      borderRadius: '12px',
+                      transition: 'all 0.3s ease',
+                      height: '100%'
+                    }}
+                  >
+                    <div>{skill.icon}</div>
+                    <strong>{skill.name}</strong>
+                  </motion.div>
+                </Col>
+              ))}
+            </Row>
+          </div>
+        ))}
+      </Container>
+    </section>
   );
 };
 

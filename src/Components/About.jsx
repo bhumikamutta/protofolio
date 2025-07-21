@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
+    <section id="about">
     <Container id="about" className="my-5">
       <motion.h2
         className="text-center mb-4 fw-bold"
@@ -53,6 +54,7 @@ const About = () => {
         </Col>
       </Row>
     </Container>
+    </section>
   );
 };
 

@@ -41,7 +41,7 @@ const Projects = () => {
   ];
 
   return (
-    <div
+    <section
       id="projects"
       style={{
         background: 'linear-gradient(to right, #ffffff, #cce4ff)',
@@ -89,7 +89,7 @@ const Projects = () => {
           </motion.div>
         ))}
       </Container>
-    </div>
+    </section>
   );
 };
 
