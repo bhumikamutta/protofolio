@@ -48,4 +48,16 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
   
+  /* App.css */
+body {
+    cursor: pointer;
+  }
+  a, button, .clickable, .nav-link {
+    cursor: pointer;
+    /* Optional: Add hover effect */
+    transition: 0.3s;
+  }
   
+  a:hover, button:hover, .clickable:hover {
+    color: #007bff; /* Bootstrap blue */
+  }
