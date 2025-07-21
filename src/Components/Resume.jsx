@@ -2,16 +2,37 @@ import React from 'react';
 
 const Resume = () => {
   return (
-    <div className="container mt-5">
-      <h2 className="text-center mb-4">My Resume</h2>
-      <iframe
-        src="/resume.pdf"
-        width="100%"
-        height="600"
-        allow="autoplay"
-        style={{ border: 'none' }}
-        title="Resume Preview"
-      ></iframe>
+    <div
+      className="d-flex flex-column align-items-center justify-content-center"
+      style={{
+        backgroundImage: 'linear-gradient(to right, #ffffff, #a2d4f5)', // White to Blue
+        padding: '20px',
+        minHeight: '100vh',
+      }}
+    >
+      <h2 className="mb-4" style={{ color: '#0a192f' }}>My Resume</h2>
+
+      <div
+        style={{
+          width: '90%',
+          height: '90vh',
+          borderRadius: '12px',
+          overflow: 'hidden',
+          boxShadow: '0 0 10px rgba(100, 255, 218, 0.3)',
+          border: '2px solid #64ffda',
+        }}
+      >
+        <iframe
+          src="/resume.pdf"
+          style={{
+            width: '100%',
+            height: '100%',
+            border: 'none',
+            backgroundColor: 'transparent',
+          }}
+          title="Resume Preview"
+        />
+      </div>
     </div>
   );
 };
