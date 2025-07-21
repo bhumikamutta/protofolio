@@ -10,7 +10,7 @@ const Resume = () => {
         minHeight: '100vh',
       }}
     >
-   <h2 className="text-white mb-4">My Resume (Updated)</h2>  // or any small change
+   <h2 className="text-white mb-4 text-primary">My Resume</h2>  
 
 
       <div
