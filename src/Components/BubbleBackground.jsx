@@ -9,7 +9,7 @@ const BubbleBackground = () => {
     <div className="bubble-background">
       {bubbles.map((_, i) => {
         const size = Math.floor(Math.random() * 20) + 10; // 10px to 30px
-        const left = Math.random() * 100; // percentage
+        const left = Math.random() * 300; // percentage
         const delay = Math.random() * 10; // seconds
         const duration = 8 + Math.random() * 10; // seconds
         const isWhite = Math.random() > 0.5;
