@@ -5,7 +5,7 @@ const Resume = () => {
     <div className="container mt-5">
       <h2 className="text-center mb-4">My Resume</h2>
       <iframe
-        src="https://drive.google.com/file/d/1JJc6wjJLrjoxDqK9FnlnKmThGc8Oue1X/preview"
+        src="/resume.pdf"
         width="100%"
         height="600"
         allow="autoplay"

@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/resume" element={<Resume />} />
         <Route path="/certificates" element={<Certificates />} />
       </Routes>
-
+<Footer/>
     </div>
   );
 };
