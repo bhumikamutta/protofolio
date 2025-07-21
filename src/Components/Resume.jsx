@@ -10,7 +10,8 @@ const Resume = () => {
         minHeight: '100vh',
       }}
     >
-      <h2 className="mb-4" style={{ color: '#0a192f' }}>My Resume</h2>
+   <h2 className="text-white mb-4">My Resume (Updated)</h2>  // or any small change
+
 
       <div
         style={{
