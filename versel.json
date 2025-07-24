@@ -1,17 +1,5 @@
 {
-    "rewrites": [
-      {
-        "source": "/resume.pdf",
-        "destination": "/resume.pdf"
-      },
-      {
-        "source": "/certificates/(.*)",
-        "destination": "/certificates/$1"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "/"
-      }
-    ]
-  }
-  
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
