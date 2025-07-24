@@ -1,15 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import profileImg from '../../public/assets/pallavi.jpg';
+import profileImg from '../assets/pallavi.jpg'; // ✅ corrected path
 import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <Container
-      id="home"
-      className="py-5 hero-section"
-      fluid
-    >
+    <Container id="home" className="py-5 hero-section" fluid>
       <Row className="align-items-center">
         <Col md={6} className="text-center text-md-start mb-4 mb-md-0">
           <motion.h1
