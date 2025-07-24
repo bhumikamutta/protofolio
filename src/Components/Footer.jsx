@@ -16,7 +16,7 @@ const Footer = () => {
 
         <div className="d-flex justify-content-center mb-3">
           <a
-            href="https://www.linkedin.com/in/your-linkedin"
+            href="https://www.linkedin.com/in/bhoomika-mutta-5705952a0"
             className="text-white mx-3"
             target="_blank"
             rel="noopener noreferrer"
@@ -24,7 +24,7 @@ const Footer = () => {
             <FaLinkedin size={30} />
           </a>
           <a
-            href="https://github.com/your-github"
+            href="https://github.com/bhumikamutta"
             className="text-white mx-3"
             target="_blank"
             rel="noopener noreferrer"

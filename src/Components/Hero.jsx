@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import profileImg from '../assets/pallavi.jpg';
+import profileImg from '../../public/assets/pallavi.jpg';
 import { motion } from 'framer-motion';
 
 const Hero = () => {

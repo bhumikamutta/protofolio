@@ -3,10 +3,10 @@ import React from 'react';
 import { Container, Card, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
-import job from '../assets/job.png';
-import food from '../assets/food.jpeg';
-import translator from '../assets/android.jpeg';
-import reacthooks from '../assets/react.png';
+import job from '../../public/assets/job.png';
+import food from '../../public/assets/food.jpeg';
+import translator from '../../public/assets/android.jpeg';
+import reacthooks from '../../public/assets/react.png';
 
 const Projects = () => {
   const projectList = [

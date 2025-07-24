@@ -8,6 +8,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 import '../App.css'
 import BubbleBackground from './BubbleBackground';
+import ProblemSolving from './ProblemSolving';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Hero />
       <About />
       <Skills />
+      <ProblemSolving/>
       <Projects />
       <Contact />
       

@@ -3,14 +3,15 @@ import { Container, Card, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
 const education = [
+ 
+
   {
-    stage: "High School (SSC)",
-    institution: "ZP High School, Manyapuratla Nathavaram",
-    board: "State Board",
-    year: "2020",
-    percentage: "100%"
-  },
-  {
+    stage: "B.Tech (CSE)",
+    institution: "RGUKT-Srikakulam",
+    board: "RGUKT",
+    year: "2026",
+    percentage: "86%"
+  },  {
     stage: "Pre University Course (MPC)",
     institution: "Rajiv Gandhi University of Knowledge Technologies",
     board: "RGUKT",
@@ -18,11 +19,11 @@ const education = [
     percentage: "93.9%"
   },
   {
-    stage: "B.Tech (CSE)",
-    institution: "RGUKT-Srikakulam",
-    board: "RGUKT",
-    year: "2026",
-    percentage: "86%"
+    stage: "High School (SSC)",
+    institution: "ZP High School, Manyapuratla Nathavaram",
+    board: "State Board",
+    year: "2020",
+    percentage: "100%"
   }
 ];
 

@@ -4,31 +4,19 @@ import { motion } from 'framer-motion';
 import EduTracker from './EduTracker';
 import BubbleBackground from './BubbleBackground';
 
-// 🖼️ Imported certificate images
-import Aifoeveryone from '../assets/certificates/Aifoeveryone.jpg';
-import datascience from '../assets/certificates/datascience.jpg';
-import frontend from '../assets/certificates/frontend.jpg';
-import interpersonal from '../assets/certificates/interpersonal.jpg';
-import node from '../assets/certificates/node.jpg';
-import nodeintro from '../assets/certificates/nodeintro.jpg';
-import nosql from '../assets/certificates/nosql.jpg';
-import react from '../assets/certificates/react.jpg';
-import restfl from '../assets/certificates/restfl.jpg';
-import sql from '../assets/certificates/sql.jpg';
-
 const certificates = {
   frontend: [
     {
       title: "Introduction to Front-End Development",
       issuer: "Simplilearn",
       date: "18 June 2024",
-      img: frontend
+      img: "/assets/certificates/frontend.jpg"
     },
     {
       title: "Build Your First Project with React",
       issuer: "IBM",
       date: "24 April 2024",
-      img: react
+      img: "/assets/certificates/react.jpg"
     }
   ],
   backend: [
@@ -36,31 +24,31 @@ const certificates = {
       title: "Build Your First Node.js App",
       issuer: "Unknown",
       date: "24 April 2024",
-      img: node
+      img: "/assets/certificates/node.jpg"
     },
     {
       title: "Introduction to Node.js",
       issuer: "Unknown",
       date: "24 April 2024",
-      img: nodeintro
+      img: "/assets/certificates/nodeintro.jpg"
     },
     {
       title: "Create Your First Project with RESTful API and Express",
       issuer: "Unknown",
       date: "April 2024",
-      img: restfl
+      img: "/assets/certificates/restfl.jpg"
     },
     {
       title: "NoSQL Database Basics",
       issuer: "IBM",
       date: "24 April 2024",
-      img: nosql
+      img: "/assets/certificates/nosql.jpg"
     },
     {
       title: "Introduction to SQL",
       issuer: "Unknown",
       date: "24 April 2024",
-      img: sql
+      img: "/assets/certificates/sql.jpg"
     }
   ],
   ai: [
@@ -68,22 +56,40 @@ const certificates = {
       title: "AI for Everyone: Master the Basics",
       issuer: "IBM",
       date: "24 April 2024",
-      img: Aifoeveryone
+      img: "/assets/certificates/Aifoeveryone.jpg"
     },
     {
       title: "Data Science with Python",
       issuer: "Simplilearn",
       date: "10 May 2024",
-      img: datascience
+      img: "/assets/certificates/datascience.jpg"
     }
   ],
-  nptel: [],
+  nptel: [
+    {
+      title:"Data Structure and Algorithms using Java",
+      issuer:"NPTEL",
+      date:"Jul-Oct 2024",
+      img:"/assets/certificates/nptel1.png"
+    },{
+      title:"Deep Learning - IIT Ropar",
+      issuer:"NPTEL",
+      date:"Jan-Apr 2025",
+      img:"/assets/certificates/nptel3.png"
+    },
+    {
+      title:"Object Oriented System Development Using UMLJava And Patterns",
+      issuer:"NPTEL",
+      date:"Jan-Apr 2025",
+      img:"/assets/certificates/nptel2.png"
+    },
+  ],
   extra: [
     {
       title: "Develop Interpersonal Skills",
       issuer: "IBM",
       date: "23 April 2024",
-      img: interpersonal
+      img: "/assets/certificates/interpersonal.jpg"
     }
   ]
 };
@@ -132,10 +138,7 @@ const Certificates = () => {
     <Container className="my-5">
       <BubbleBackground />
       <h2 className="text-center mb-4">🎓 Education & Certificates</h2>
-      <Tabs defaultActiveKey="education" className="mb-3 nav-pills justify-content-center" variant="pills">
-        <Tab eventKey="education" title="🎓 Education">
-          <EduTracker />
-        </Tab>
+      <Tabs defaultActiveKey="certificates" className="mb-3 nav-pills justify-content-center" variant="pills">
         <Tab eventKey="certificates" title="📜 Certificates">
           <Tabs defaultActiveKey="frontend" className="mb-3" justify variant="tabs">
             <Tab eventKey="frontend" title="💻 Frontend">
@@ -154,6 +157,9 @@ const Certificates = () => {
               {renderCards(certificates.extra)}
             </Tab>
           </Tabs>
+        </Tab>
+        <Tab eventKey="education" title="🎓 Education">
+          <EduTracker />
         </Tab>
       </Tabs>
     </Container>

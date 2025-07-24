@@ -34,7 +34,7 @@ const NavBar = () => {
             <Nav.Link onClick={() => handleNavClick("about")} className="text-white">About</Nav.Link>
             <Nav.Link onClick={() => handleNavClick("skills")} className="text-white">Skills</Nav.Link>
             <Nav.Link onClick={() => handleNavClick("projects")} className="text-white">Projects</Nav.Link>
-            <Nav.Link href="/certificates" className="text-white">Certificates</Nav.Link>
+            <Nav.Link href="/certificates" className="text-white">Education&Certificates</Nav.Link>
             <Nav.Link href="/resume" className="text-white">Resume</Nav.Link>
             <Nav.Link onClick={() => handleNavClick("contact")} className="text-white"><button className='btn btn-light'>Contact</button></Nav.Link>
           </Nav>
