@@ -4,19 +4,35 @@ import { motion } from 'framer-motion';
 import EduTracker from './EduTracker';
 import BubbleBackground from './BubbleBackground';
 
+// 🖼️ Imported certificate images
+import Aifoeveryone from '../../public/certificates/Aifoeveryone.jpg';
+import datascience from '../../public/certificates/datascience.jpg';
+import frontend from '../../public/certificates/frontend.jpg';
+import interpersonal from '../../public/certificates/interpersonal.jpg';
+import node from '../../public/certificates/node.jpg';
+import nodeintro from '../../public/certificates/nodeintro.jpg';
+import nosql from '../../public/certificates/nosql.jpg';
+import react from '../../public/certificates/react.jpg';
+import restfl from '../../public/certificates/restfl.jpg';
+import sql from '../../public/certificates/sql.jpg';
+import nptel1 from '../../public/certificates/nptel1.png'
+import nptel2 from '../../public/certificates/nptel2.png'
+import nptel3 from '../../public/certificates/nptel3.png'
+
+
 const certificates = {
   frontend: [
     {
       title: "Introduction to Front-End Development",
       issuer: "Simplilearn",
       date: "18 June 2024",
-      img: "/assets/certificates/frontend.jpg"
+      img: frontend
     },
     {
       title: "Build Your First Project with React",
       issuer: "IBM",
       date: "24 April 2024",
-      img: "/assets/certificates/react.jpg"
+      img: react
     }
   ],
   backend: [
@@ -24,31 +40,31 @@ const certificates = {
       title: "Build Your First Node.js App",
       issuer: "Unknown",
       date: "24 April 2024",
-      img: "/assets/certificates/node.jpg"
+      img: node
     },
     {
       title: "Introduction to Node.js",
       issuer: "Unknown",
       date: "24 April 2024",
-      img: "/assets/certificates/nodeintro.jpg"
+      img: nodeintro
     },
     {
       title: "Create Your First Project with RESTful API and Express",
       issuer: "Unknown",
       date: "April 2024",
-      img: "/assets/certificates/restfl.jpg"
+      img: restfl
     },
     {
       title: "NoSQL Database Basics",
       issuer: "IBM",
       date: "24 April 2024",
-      img: "/assets/certificates/nosql.jpg"
+      img: nosql
     },
     {
       title: "Introduction to SQL",
       issuer: "Unknown",
       date: "24 April 2024",
-      img: "/assets/certificates/sql.jpg"
+      img: sql
     }
   ],
   ai: [
@@ -56,13 +72,13 @@ const certificates = {
       title: "AI for Everyone: Master the Basics",
       issuer: "IBM",
       date: "24 April 2024",
-      img: "/assets/certificates/Aifoeveryone.jpg"
+      img: Aifoeveryone
     },
     {
       title: "Data Science with Python",
       issuer: "Simplilearn",
       date: "10 May 2024",
-      img: "/assets/certificates/datascience.jpg"
+      img: datascience
     }
   ],
   nptel: [
@@ -70,18 +86,18 @@ const certificates = {
       title:"Data Structure and Algorithms using Java",
       issuer:"NPTEL",
       date:"Jul-Oct 2024",
-      img:"/assets/certificates/nptel1.png"
+      img:nptel1
     },{
       title:"Deep Learning - IIT Ropar",
       issuer:"NPTEL",
       date:"Jan-Apr 2025",
-      img:"/assets/certificates/nptel3.png"
+      img:nptel3
     },
     {
       title:"Object Oriented System Development Using UMLJava And Patterns",
       issuer:"NPTEL",
       date:"Jan-Apr 2025",
-      img:"/assets/certificates/nptel2.png"
+      img:nptel2
     },
   ],
   extra: [
@@ -89,7 +105,7 @@ const certificates = {
       title: "Develop Interpersonal Skills",
       issuer: "IBM",
       date: "23 April 2024",
-      img: "/assets/certificates/interpersonal.jpg"
+      img: interpersonal
     }
   ]
 };
@@ -139,6 +155,7 @@ const Certificates = () => {
       <BubbleBackground />
       <h2 className="text-center mb-4">🎓 Education & Certificates</h2>
       <Tabs defaultActiveKey="certificates" className="mb-3 nav-pills justify-content-center" variant="pills">
+      
         <Tab eventKey="certificates" title="📜 Certificates">
           <Tabs defaultActiveKey="frontend" className="mb-3" justify variant="tabs">
             <Tab eventKey="frontend" title="💻 Frontend">
