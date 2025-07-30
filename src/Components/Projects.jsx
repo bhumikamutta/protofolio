@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Row, Col } from 'react-bootstrap';
+import { Container, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 
@@ -36,42 +36,48 @@ const projectList = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="p-5">
-      <h2 className="text-center mb-4">Projects</h2>
-      <Row xs={1} md={2} className="g-4">
+    <section id="projects" className="p-5 bg-light">
+      <Container>
+        <h2 className="text-center mb-5">Projects</h2>
         {projectList.map((project, idx) => (
-          <Col key={idx}>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-100 shadow-sm rounded-4">
-                <Card.Img
-                  variant="top"
-                  src={project.image}
-                  alt={project.title}
-                  style={{ height: '250px', objectFit: 'cover' }}
-                />
-                <Card.Body>
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-4"
+          >
+            <Card className="flex-md-row h-100 shadow-sm rounded-4 overflow-hidden">
+              <Card.Img
+                src={project.image}
+                alt={project.title}
+                style={{
+                  width: '100%',
+                  maxWidth: '300px',
+                  height: '200px',
+                  objectFit: 'cover',
+                }}
+              />
+              <Card.Body className="d-flex flex-column justify-content-between">
+                <div>
                   <Card.Title>{project.title}</Card.Title>
                   <Card.Text>{project.description}</Card.Text>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-dark"
-                  >
-                    <FaGithub className="me-2" />
-                    GitHub
-                  </a>
-                </Card.Body>
-              </Card>
-            </motion.div>
-          </Col>
+                </div>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-dark w-50 mt-3"
+                >
+                  <FaGithub className="me-2" />
+                  GitHub
+                </a>
+              </Card.Body>
+            </Card>
+          </motion.div>
         ))}
-      </Row>
+      </Container>
     </section>
   );
 };

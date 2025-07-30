@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import profileImg from '/assets/pallavi.jpg'; // ✅ corrected path
+import profileImg from '/assets/pallavi.jpeg'; // ✅ corrected path
 import { motion } from 'framer-motion';
 
 const Hero = () => {
