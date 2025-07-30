@@ -5,35 +5,28 @@ const Resume = () => {
     <div
       className="d-flex flex-column align-items-center justify-content-center"
       style={{
-        backgroundImage: 'linear-gradient(to right, #ffffff, #a2d4f5)', // White to Blue
+        backgroundImage: 'linear-gradient(to right, #ffffff, #a2d4f5)',
         padding: '20px',
         minHeight: '100vh',
       }}
     >
-   <h2 className="text-white mb-4 text-primary">My Resume</h2>  
+      <h2 className="text-primary mb-4">My Resume</h2>
 
-
-      <div
+      <a
+        href="/resume.pdf"
+        download="Bhoomika_Mutta_Resume.pdf" // file name when downloaded
+        className="btn btn-success"
         style={{
-          width: '90%',
-          height: '90vh',
-          borderRadius: '12px',
-          overflow: 'hidden',
-          boxShadow: '0 0 10px rgba(100, 255, 218, 0.3)',
-          border: '2px solid #64ffda',
+          fontSize: '18px',
+          padding: '10px 20px',
+          borderRadius: '8px',
+          textDecoration: 'none',
+          fontWeight: 'bold',
+          marginBottom: '20px',
         }}
       >
-        <iframe
-          src="/resume.pdf"
-          style={{
-            width: '100%',
-            height: '100%',
-            border: 'none',
-            backgroundColor: 'transparent',
-          }}
-          title="Resume Preview"
-        />
-      </div>
+        Download Resume
+      </a>
     </div>
   );
 };
