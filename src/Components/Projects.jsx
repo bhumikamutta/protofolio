@@ -36,43 +36,51 @@ const projectList = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="p-5 bg-light">
+    <section id="projects" className="p-5">
       <Container>
-        <h2 className="text-center mb-5">Projects</h2>
+        <h2 className="text-center mb-5 fw-bold">Projects</h2>
         {projectList.map((project, idx) => (
           <motion.div
             key={idx}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: idx * 0.2 }}
             viewport={{ once: true }}
             className="mb-4"
           >
-            <Card className="flex-md-row h-100 shadow-sm rounded-4 overflow-hidden">
-              <Card.Img
-                src={project.image}
-                alt={project.title}
-                style={{
-                  width: '100%',
-                  maxWidth: '300px',
-                  height: '200px',
-                  objectFit: 'cover',
-                }}
-              />
-              <Card.Body className="d-flex flex-column justify-content-between">
+            <Card className="flex-md-row h-100 rounded-4 overflow-hidden shadow-lg">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: 'spring', stiffness: 200 }}
+              >
+                <Card.Img
+                  src={project.image}
+                  alt={project.title}
+                  style={{
+                    width: '100%',
+                    maxWidth: '300px',
+                    height: '200px',
+                    objectFit: 'cover',
+                  }}
+                />
+              </motion.div>
+
+              <Card.Body className="d-flex flex-column justify-content-between bg-light text-dark">
                 <div>
-                  <Card.Title>{project.title}</Card.Title>
+                  <Card.Title className="fw-semibold">{project.title}</Card.Title>
                   <Card.Text>{project.description}</Card.Text>
                 </div>
-                <a
+                <motion.a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-dark w-50 mt-3"
+                  whileHover={{ scale: 1.05, opacity: 0.85 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <FaGithub className="me-2" />
                   GitHub
-                </a>
+                </motion.a>
               </Card.Body>
             </Card>
           </motion.div>

@@ -91,8 +91,13 @@ const certificates = {
       issuer: "IBM",
       date: "23 April 2024",
       img: "/certificates/interpersonal.jpg"
-    }
-  ]
+    }],
+    internship:[{
+      title:"ANDROID APP DEVELOPMENT",
+      issuer:"APSSDC",
+      date:"12-july-2025",
+      img:"/certificates/apssdc.jpg"   }]
+  
 };
 
 const renderCards = (list) => (
@@ -156,6 +161,9 @@ const Certificates = () => {
             </Tab>
             <Tab eventKey="extra" title="🌟 Extra-Curricular">
               {renderCards(certificates.extra)}
+            </Tab>
+            <Tab eventKey="Internsship" title="Internship">
+              {renderCards(certificates.internship)}
             </Tab>
           </Tabs>
         </Tab>

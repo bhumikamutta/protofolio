@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { FiDownload } from 'react-icons/fi';
+
 import '../App.css';
 
 const NavBar = () => {
@@ -77,7 +79,7 @@ const NavBar = () => {
               rel="noopener noreferrer"
               className="text-white"
             >
-              Resume
+              <FiDownload /> Resume
             </Nav.Link>
 
             <Nav.Link

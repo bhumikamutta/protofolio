@@ -61,3 +61,7 @@ body {
   a:hover, button:hover, .clickable:hover {
     color: #007bff; /* Bootstrap blue */
   }
+  body {
+    cursor: url('/cursor-blue.png'), pointer;
+  }
+  
