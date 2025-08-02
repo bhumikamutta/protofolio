@@ -1,17 +1,17 @@
-// src/components/NavBar.jsx
 import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { FiDownload } from 'react-icons/fi';
-
 import '../App.css';
 
 const NavBar = () => {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState("");
+  const [expanded, setExpanded] = useState(false); // 👈 new state
 
   const handleNavClick = (section) => {
     setActiveSection(section);
+    setExpanded(false); // 👈 collapse navbar after click
 
     if (window.location.pathname !== "/") {
       navigate("/");
@@ -31,16 +31,25 @@ const NavBar = () => {
 
   const goToCertificates = () => {
     setActiveSection("certificates");
+    setExpanded(false); // 👈 collapse here too
     navigate("/certificates");
   };
 
   return (
-    <Navbar expand="lg" sticky="top" className="gradient-navbar">
+    <Navbar
+      expand="lg"
+      sticky="top"
+      className="gradient-navbar"
+      expanded={expanded} // 👈 controlled navbar
+      onToggle={setExpanded} // 👈 updates on toggling
+    >
       <Container>
-        <Navbar.Brand onClick={() => navigate("/")} className="text-white fw-bold" style={{ cursor: 'pointer' }}>
+        <Navbar.Brand onClick={() => { navigate("/"); setExpanded(false); }} className="text-white fw-bold" style={{ cursor: 'pointer' }}>
           Mutta Bhoomika
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-white" />
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
 
@@ -78,6 +87,7 @@ const NavBar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-white"
+              onClick={() => setExpanded(false)} // 👈 also collapse here
             >
               <FiDownload /> Resume
             </Nav.Link>
