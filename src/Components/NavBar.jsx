@@ -1,13 +1,16 @@
 // src/components/NavBar.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
 
 const NavBar = () => {
   const navigate = useNavigate();
+  const [activeSection, setActiveSection] = useState("");
 
   const handleNavClick = (section) => {
+    setActiveSection(section);
+
     if (window.location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
@@ -25,6 +28,7 @@ const NavBar = () => {
   };
 
   const goToCertificates = () => {
+    setActiveSection("certificates");
     navigate("/certificates");
   };
 
@@ -37,10 +41,34 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-white" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link onClick={() => handleNavClick("about")} className="text-white">About</Nav.Link>
-            <Nav.Link onClick={() => handleNavClick("skills")} className="text-white">Skills</Nav.Link>
-            <Nav.Link onClick={() => handleNavClick("projects")} className="text-white">Projects</Nav.Link>
-            <Nav.Link onClick={goToCertificates} className="text-white">Education & Certificates</Nav.Link>
+
+            <Nav.Link
+              onClick={() => handleNavClick("about")}
+              className={`text-white ${activeSection === "about" ? "fw-bold text-warning" : ""}`}
+            >
+              About
+            </Nav.Link>
+
+            <Nav.Link
+              onClick={() => handleNavClick("skills")}
+              className={`text-white ${activeSection === "skills" ? "fw-bold text-warning" : ""}`}
+            >
+              Skills
+            </Nav.Link>
+
+            <Nav.Link
+              onClick={() => handleNavClick("projects")}
+              className={`text-white ${activeSection === "projects" ? "fw-bold text-warning" : ""}`}
+            >
+              Projects
+            </Nav.Link>
+
+            <Nav.Link
+              onClick={goToCertificates}
+              className={`text-white ${activeSection === "certificates" ? "fw-bold text-warning" : ""}`}
+            >
+              Education & Certificates
+            </Nav.Link>
 
             <Nav.Link
               href="/Mutta_Bhoomika_Resume.pdf"
@@ -52,9 +80,13 @@ const NavBar = () => {
               Resume
             </Nav.Link>
 
-            <Nav.Link onClick={() => handleNavClick("contact")} className="text-white">
+            <Nav.Link
+              onClick={() => handleNavClick("contact")}
+              className={`text-white ${activeSection === "contact" ? "fw-bold text-warning" : ""}`}
+            >
               <button className='btn btn-light'>Contact</button>
             </Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
